@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design 3 颜色主题编辑器</title>
+    <link rel="stylesheet" href="styles/material-theme.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 侧边栏颜色设置面板 -->
+        <aside class="color-panel">
+            <h2 class="panel-title">颜色设置</h2>
+            
+            <div class="color-section">
+                <h3>Primary Colors 主色</h3>
+                <div class="color-input-group">
+                    <label for="primary-color">Primary 主色<br><small>应用的主要品牌色，用于按钮、链接等主要元素</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="primary-color" value="#6750A4" data-token="primary">
+                        <input type="text" class="hex-input" id="primary-hex" value="#6750A4" data-token="primary" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-primary-color">On Primary 主色上的文本<br><small>显示在主色背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-primary-color" value="#FFFFFF" data-token="on-primary">
+                        <input type="text" class="hex-input" id="on-primary-hex" value="#FFFFFF" data-token="on-primary" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="primary-container-color">Primary Container 主色容器<br><small>主色的低对比度变体，用于背景区域</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="primary-container-color" value="#EADDFF" data-token="primary-container">
+                        <input type="text" class="hex-input" id="primary-container-hex" value="#EADDFF" data-token="primary-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-primary-container-color">On Primary Container 主色容器上的文本<br><small>显示在主色容器背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-primary-container-color" value="#21005D" data-token="on-primary-container">
+                        <input type="text" class="hex-input" id="on-primary-container-hex" value="#21005D" data-token="on-primary-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h3>Secondary Colors 辅助色</h3>
+                <div class="color-input-group">
+                    <label for="secondary-color">Secondary 辅助色<br><small>提供颜色层次的辅助色彩，用于不太突出的元素</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="secondary-color" value="#625B71" data-token="secondary">
+                        <input type="text" class="hex-input" id="secondary-hex" value="#625B71" data-token="secondary" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-secondary-color">On Secondary 辅助色上的文本<br><small>显示在辅助色背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-secondary-color" value="#FFFFFF" data-token="on-secondary">
+                        <input type="text" class="hex-input" id="on-secondary-hex" value="#FFFFFF" data-token="on-secondary" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="secondary-container-color">Secondary Container 辅助色容器<br><small>辅助色的低对比度变体，用于背景和容器</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="secondary-container-color" value="#E8DEF8" data-token="secondary-container">
+                        <input type="text" class="hex-input" id="secondary-container-hex" value="#E8DEF8" data-token="secondary-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-secondary-container-color">On Secondary Container 辅助色容器上的文本<br><small>显示在辅助色容器背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-secondary-container-color" value="#1D192B" data-token="on-secondary-container">
+                        <input type="text" class="hex-input" id="on-secondary-container-hex" value="#1D192B" data-token="on-secondary-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h3>Tertiary Colors 第三色</h3>
+                <div class="color-input-group">
+                    <label for="tertiary-color">Tertiary 第三色<br><small>用于对比强调和平衡主色与辅助色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="tertiary-color" value="#7D5260" data-token="tertiary">
+                        <input type="text" class="hex-input" id="tertiary-hex" value="#7D5260" data-token="tertiary" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-tertiary-color">On Tertiary 第三色上的文本<br><small>显示在第三色背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-tertiary-color" value="#FFFFFF" data-token="on-tertiary">
+                        <input type="text" class="hex-input" id="on-tertiary-hex" value="#FFFFFF" data-token="on-tertiary" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="tertiary-container-color">Tertiary Container 第三色容器<br><small>第三色的低对比度变体，用于特殊背景区域</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="tertiary-container-color" value="#FFD8E4" data-token="tertiary-container">
+                        <input type="text" class="hex-input" id="tertiary-container-hex" value="#FFD8E4" data-token="tertiary-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-tertiary-container-color">On Tertiary Container 第三色容器上的文本<br><small>显示在第三色容器背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-tertiary-container-color" value="#31111D" data-token="on-tertiary-container">
+                        <input type="text" class="hex-input" id="on-tertiary-container-hex" value="#31111D" data-token="on-tertiary-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h3>Error Colors 错误色</h3>
+                <div class="color-input-group">
+                    <label for="error-color">Error 错误色<br><small>用于显示错误状态和警告信息</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="error-color" value="#BA1A1A" data-token="error">
+                        <input type="text" class="hex-input" id="error-hex" value="#BA1A1A" data-token="error" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-error-color">On Error 错误色上的文本<br><small>显示在错误色背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-error-color" value="#FFFFFF" data-token="on-error">
+                        <input type="text" class="hex-input" id="on-error-hex" value="#FFFFFF" data-token="on-error" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="error-container-color">Error Container 错误色容器<br><small>错误色的低对比度变体，用于错误提示区域</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="error-container-color" value="#FFDAD6" data-token="error-container">
+                        <input type="text" class="hex-input" id="error-container-hex" value="#FFDAD6" data-token="error-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-error-container-color">On Error Container 错误色容器上的文本<br><small>显示在错误色容器背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-error-container-color" value="#410002" data-token="on-error-container">
+                        <input type="text" class="hex-input" id="on-error-container-hex" value="#410002" data-token="on-error-container" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h3>Surface Colors 表面色</h3>
+                <div class="color-input-group">
+                    <label for="background-color">Background 背景色<br><small>应用的主要背景色，位于所有内容之后</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="background-color" value="#FFFBFE" data-token="background">
+                        <input type="text" class="hex-input" id="background-hex" value="#FFFBFE" data-token="background" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-background-color">On Background 背景色上的文本<br><small>显示在背景色上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-background-color" value="#1C1B1F" data-token="on-background">
+                        <input type="text" class="hex-input" id="on-background-hex" value="#1C1B1F" data-token="on-background" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="surface-color">Surface 表面色<br><small>用于卡片、工具栏和其他组件的背景色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="surface-color" value="#FFFBFE" data-token="surface">
+                        <input type="text" class="hex-input" id="surface-hex" value="#FFFBFE" data-token="surface" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-surface-color">On Surface 表面色上的文本<br><small>显示在表面色背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-surface-color" value="#1C1B1F" data-token="on-surface">
+                        <input type="text" class="hex-input" id="on-surface-hex" value="#1C1B1F" data-token="on-surface" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="surface-variant-color">Surface Variant 表面变体色<br><small>用于低对比度表面的颜色变体</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="surface-variant-color" value="#E7E0EC" data-token="surface-variant">
+                        <input type="text" class="hex-input" id="surface-variant-hex" value="#E7E0EC" data-token="surface-variant" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="on-surface-variant-color">On Surface Variant 表面变体色上的文本<br><small>显示在表面变体色背景上的文本和图标颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="on-surface-variant-color" value="#49454F" data-token="on-surface-variant">
+                        <input type="text" class="hex-input" id="on-surface-variant-hex" value="#49454F" data-token="on-surface-variant" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="outline-color">Outline 边框色<br><small>用于边框、分割线和轮廓的颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="outline-color" value="#79747E" data-token="outline">
+                        <input type="text" class="hex-input" id="outline-hex" value="#79747E" data-token="outline" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+                <div class="color-input-group">
+                    <label for="outline-variant-color">Outline Variant 边框变体色<br><small>用于低对比度边框和分割线的颜色</small></label>
+                    <div class="color-inputs">
+                        <input type="color" id="outline-variant-color" value="#CAC4D0" data-token="outline-variant">
+                        <input type="text" class="hex-input" id="outline-variant-hex" value="#CAC4D0" data-token="outline-variant" maxlength="7" placeholder="#RRGGBB">
+                    </div>
+                </div>
+            </div>
+
+            <div class="preset-section">
+                <h3>预设主题</h3>
+                <button class="preset-btn" data-preset="default">默认</button>
+                <button class="preset-btn" data-preset="blue">蓝色</button>
+                <button class="preset-btn" data-preset="green">绿色</button>
+                <button class="preset-btn" data-preset="orange">橙色</button>
+                <button class="preset-btn" id="random-theme-btn">随机主题</button>
+                <button class="preset-btn" id="reset-theme-btn">重置默认</button>
+                <button class="preset-btn" id="reset-dark-btn">重置黑暗模式</button>
+            </div>
+        </aside>
+
+        <!-- 主内容区域 - 左右分栏展示 -->
+        <main class="main-content">
+            <header class="app-header">
+                <div class="header-content">
+                    <h1>Material Design 3 颜色主题编辑器</h1>
+                    <div class="header-toolbar">
+                        <button class="tool-btn" id="export-theme-btn" title="导出主题">
+                            <span class="material-icons">download</span>
+                            导出主题
+                        </button>
+                        <button class="tool-btn" id="import-theme-btn" title="导入主题">
+                            <span class="material-icons">upload</span>
+                            导入主题
+                        </button>
+                        <button class="tool-btn" id="shortcuts-help-btn" title="快捷键帮助">
+                            <span class="material-icons">help_outline</span>
+                            快捷键
+                        </button>
+                    </div>
+                </div>
+                <nav class="tab-navigation">
+                    <button class="tab-btn active" data-page="components">组件展示</button>
+                    <button class="tab-btn" data-page="cards">卡片页面</button>
+                    <button class="tab-btn" data-page="forms">表单页面</button>
+                    <button class="tab-btn" data-page="layout">布局页面</button>
+                </nav>
+            </header>
+
+            <!-- 双栏展示区域 -->
+            <div class="dual-view-container">
+                <!-- 亮色模式展示区域 -->
+                <div class="theme-view light-view" data-theme="light">
+                    <div class="view-header">
+                        <h2>亮色模式</h2>
+                    </div>
+                    <div class="view-content">
+                        <!-- 组件展示页面 -->
+                        <section id="light-components-page" class="page active">
+                            <div class="demo-section">
+                                <h3>按钮组件</h3>
+                                <div class="button-group">
+                                    <button class="md-button filled">Filled Button</button>
+                                    <button class="md-button outlined">Outlined Button</button>
+                                    <button class="md-button text">Text Button</button>
+                                    <button class="md-button elevated">Elevated Button</button>
+                                    <button class="md-button tonal">Tonal Button</button>
+                                </div>
+                            </div>
+
+                            <div class="demo-section">
+                                <h3>卡片组件</h3>
+                                <div class="card-group">
+                                    <div class="md-card filled">
+                                        <h4>Filled Card</h4>
+                                        <p>这是一个Material Design 3风格的填充卡片。</p>
+                                        <button class="md-button text">了解更多</button>
+                                    </div>
+                                    <div class="md-card elevated">
+                                        <h4>Elevated Card</h4>
+                                        <p>这是一个Material Design 3风格的抬高卡片。</p>
+                                        <button class="md-button text">了解更多</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="demo-section">
+                                <h3>输入组件</h3>
+                                <div class="input-group">
+                                    <div class="md-textfield">
+                                        <input type="text" id="light-text-input" placeholder=" ">
+                                        <label for="light-text-input">文本输入</label>
+                                    </div>
+                                    <div class="md-textfield">
+                                        <input type="email" id="light-email-input" placeholder=" ">
+                                        <label for="light-email-input">邮箱</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 卡片页面 -->
+                        <section id="light-cards-page" class="page">
+                            <div class="cards-grid">
+                                <div class="md-card elevated">
+                                    <div class="card-header">
+                                        <span class="material-icons">photo</span>
+                                        <h4>图片卡片</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>这是一个包含图标和内容的Material Design 3卡片示例。</p>
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="md-button text">分享</button>
+                                        <button class="md-button text">了解更多</button>
+                                    </div>
+                                </div>
+
+                                <div class="md-card filled">
+                                    <div class="card-header">
+                                        <span class="material-icons">settings</span>
+                                        <h4>设置卡片</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>配置您的应用程序设置和偏好。</p>
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="md-button filled">配置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 表单页面 -->
+                        <section id="light-forms-page" class="page">
+                            <div class="form-container">
+                                <h3>用户信息表单</h3>
+                                <form class="md-form">
+                                    <div class="md-textfield">
+                                        <input type="text" id="light-first-name" placeholder=" " required>
+                                        <label for="light-first-name">姓名</label>
+                                    </div>
+                                    <div class="md-textfield">
+                                        <input type="email" id="light-user-email" placeholder=" " required>
+                                        <label for="light-user-email">邮箱地址</label>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="reset" class="md-button outlined">重置</button>
+                                        <button type="submit" class="md-button filled">提交</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+
+                        <!-- 布局页面 -->
+                        <section id="light-layout-page" class="page">
+                            <div class="layout-demo">
+                                <div class="app-bar">
+                                    <span class="material-icons">menu</span>
+                                    <h3>应用标题</h3>
+                                    <span class="material-icons">search</span>
+                                </div>
+                                <div class="content-grid">
+                                    <div class="sidebar">
+                                        <nav class="navigation">
+                                            <a href="#" class="nav-item active">
+                                                <span class="material-icons">home</span>
+                                                首页
+                                            </a>
+                                            <a href="#" class="nav-item">
+                                                <span class="material-icons">dashboard</span>
+                                                仪表板
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="main-area">
+                                        <div class="md-card elevated">
+                                            <h4>统计信息</h4>
+                                            <div class="stats">
+                                                <div class="stat-item">
+                                                    <span class="stat-value">1,234</span>
+                                                    <span class="stat-label">访问量</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- 黑暗模式展示区域 -->
+                <div class="theme-view dark-view" data-theme="dark">
+                    <div class="view-header">
+                        <h2>黑暗模式</h2>
+                        <div class="dark-mode-controls">
+                            <label for="dark-bg-color" class="dark-bg-label">背景色</label>
+                            <input type="color" id="dark-bg-color" class="dark-bg-input" value="#000000" title="调整黑暗模式背景色">
+                        </div>
+                    </div>
+                    <div class="view-content">
+                        <!-- 组件展示页面 -->
+                        <section id="dark-components-page" class="page active">
+                            <div class="demo-section">
+                                <h3>按钮组件</h3>
+                                <div class="button-group">
+                                    <button class="md-button filled">Filled Button</button>
+                                    <button class="md-button outlined">Outlined Button</button>
+                                    <button class="md-button text">Text Button</button>
+                                    <button class="md-button elevated">Elevated Button</button>
+                                    <button class="md-button tonal">Tonal Button</button>
+                                </div>
+                            </div>
+
+                            <div class="demo-section">
+                                <h3>卡片组件</h3>
+                                <div class="card-group">
+                                    <div class="md-card filled">
+                                        <h4>Filled Card</h4>
+                                        <p>这是一个Material Design 3风格的填充卡片。</p>
+                                        <button class="md-button text">了解更多</button>
+                                    </div>
+                                    <div class="md-card elevated">
+                                        <h4>Elevated Card</h4>
+                                        <p>这是一个Material Design 3风格的抬高卡片。</p>
+                                        <button class="md-button text">了解更多</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="demo-section">
+                                <h3>输入组件</h3>
+                                <div class="input-group">
+                                    <div class="md-textfield">
+                                        <input type="text" id="dark-text-input" placeholder=" ">
+                                        <label for="dark-text-input">文本输入</label>
+                                    </div>
+                                    <div class="md-textfield">
+                                        <input type="email" id="dark-email-input" placeholder=" ">
+                                        <label for="dark-email-input">邮箱</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 卡片页面 -->
+                        <section id="dark-cards-page" class="page">
+                            <div class="cards-grid">
+                                <div class="md-card elevated">
+                                    <div class="card-header">
+                                        <span class="material-icons">photo</span>
+                                        <h4>图片卡片</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>这是一个包含图标和内容的Material Design 3卡片示例。</p>
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="md-button text">分享</button>
+                                        <button class="md-button text">了解更多</button>
+                                    </div>
+                                </div>
+
+                                <div class="md-card filled">
+                                    <div class="card-header">
+                                        <span class="material-icons">settings</span>
+                                        <h4>设置卡片</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>配置您的应用程序设置和偏好。</p>
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="md-button filled">配置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 表单页面 -->
+                        <section id="dark-forms-page" class="page">
+                            <div class="form-container">
+                                <h3>用户信息表单</h3>
+                                <form class="md-form">
+                                    <div class="md-textfield">
+                                        <input type="text" id="dark-first-name" placeholder=" " required>
+                                        <label for="dark-first-name">姓名</label>
+                                    </div>
+                                    <div class="md-textfield">
+                                        <input type="email" id="dark-user-email" placeholder=" " required>
+                                        <label for="dark-user-email">邮箱地址</label>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="reset" class="md-button outlined">重置</button>
+                                        <button type="submit" class="md-button filled">提交</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+
+                        <!-- 布局页面 -->
+                        <section id="dark-layout-page" class="page">
+                            <div class="layout-demo">
+                                <div class="app-bar">
+                                    <span class="material-icons">menu</span>
+                                    <h3>应用标题</h3>
+                                    <span class="material-icons">search</span>
+                                </div>
+                                <div class="content-grid">
+                                    <div class="sidebar">
+                                        <nav class="navigation">
+                                            <a href="#" class="nav-item active">
+                                                <span class="material-icons">home</span>
+                                                首页
+                                            </a>
+                                            <a href="#" class="nav-item">
+                                                <span class="material-icons">dashboard</span>
+                                                仪表板
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="main-area">
+                                        <div class="md-card elevated">
+                                            <h4>统计信息</h4>
+                                            <div class="stats">
+                                                <div class="stat-item">
+                                                    <span class="stat-value">1,234</span>
+                                                    <span class="stat-label">访问量</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 键盘快捷键帮助模态框 -->
+    <div id="shortcuts-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>键盘快捷键</h2>
+                <button class="modal-close" id="modal-close-btn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="shortcuts-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>1</kbd>
+                        </div>
+                        <div class="shortcut-desc">切换到组件展示页面</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>2</kbd>
+                        </div>
+                        <div class="shortcut-desc">切换到卡片页面</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>3</kbd>
+                        </div>
+                        <div class="shortcut-desc">切换到表单页面</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>4</kbd>
+                        </div>
+                        <div class="shortcut-desc">切换到布局页面</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>R</kbd>
+                        </div>
+                        <div class="shortcut-desc">生成随机主题</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>D</kbd>
+                        </div>
+                        <div class="shortcut-desc">重置为默认主题</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>E</kbd>
+                        </div>
+                        <div class="shortcut-desc">导出当前主题</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>I</kbd>
+                        </div>
+                        <div class="shortcut-desc">导入主题文件</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>?</kbd>
+                        </div>
+                        <div class="shortcut-desc">显示此帮助</div>
+                    </div>
+                </div>
+                <div class="modal-note">
+                    <p><strong>注意：</strong>所有快捷键都使用 <kbd>Ctrl</kbd> 键，包括Mac系统</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/color-manager.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
