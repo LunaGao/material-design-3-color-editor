@@ -6,6 +6,13 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat-square)
 ![CSS3](https://img.shields.io/badge/CSS-3-blue?style=flat-square)
 ![HTML5](https://img.shields.io/badge/HTML-5-orange?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+## 🌐 在线演示
+
+**[👉 立即体验 Material Design 3 颜色主题编辑器](https://YOUR_USERNAME.github.io/material-design-3-color-editor/)**
+
+> 💡 请将上面链接中的 `YOUR_USERNAME` 替换为您的 GitHub 用户名
 
 ## 🎨 项目简介
 
@@ -55,8 +62,11 @@
 
 1. **克隆或下载项目**
 ```bash
-git clone [项目地址]
-cd material_color
+# 克隆仓库 (请替换 YOUR_USERNAME 为您的 GitHub 用户名)
+git clone https://github.com/YOUR_USERNAME/material-design-3-color-editor.git
+cd material-design-3-color-editor
+
+# 或直接下载 ZIP 文件并解压
 ```
 
 2. **启动本地服务器**
@@ -289,9 +299,11 @@ const presets = {
 
 如果您有任何问题或建议，请通过以下方式联系我们：
 
-- 提交 Issue
-- 发送 Pull Request
-- 邮件联系：[your-email@example.com]
+- 🐛 提交 [Issue](https://github.com/YOUR_USERNAME/material-design-3-color-editor/issues)
+- 🔥 发送 [Pull Request](https://github.com/YOUR_USERNAME/material-design-3-color-editor/pulls)
+- ⭐ 给项目点个 Star 支持我们
+
+> 💡 请将上面链接中的 `YOUR_USERNAME` 替换为您的 GitHub 用户名
 
 ---
 
