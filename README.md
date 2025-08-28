@@ -10,9 +10,7 @@
 
 ## 🌐 在线演示
 
-**[👉 立即体验 Material Design 3 颜色主题编辑器](https://YOUR_USERNAME.github.io/material-design-3-color-editor/)**
-
-> 💡 请将上面链接中的 `YOUR_USERNAME` 替换为您的 GitHub 用户名
+**[👉 立即体验 Material Design 3 颜色主题编辑器](https://lunagao.github.io/material-design-3-color-editor/)**
 
 ## 🎨 项目简介
 
@@ -63,7 +61,7 @@
 1. **克隆或下载项目**
 ```bash
 # 克隆仓库 (请替换 YOUR_USERNAME 为您的 GitHub 用户名)
-git clone https://github.com/YOUR_USERNAME/material-design-3-color-editor.git
+git clone https://github.com/LunaGao/material-design-3-color-editor.git
 cd material-design-3-color-editor
 
 # 或直接下载 ZIP 文件并解压
@@ -299,11 +297,9 @@ const presets = {
 
 如果您有任何问题或建议，请通过以下方式联系我们：
 
-- 🐛 提交 [Issue](https://github.com/YOUR_USERNAME/material-design-3-color-editor/issues)
-- 🔥 发送 [Pull Request](https://github.com/YOUR_USERNAME/material-design-3-color-editor/pulls)
+- 🐛 提交 [Issue](https://github.com/LunaGao/material-design-3-color-editor/issues)
+- 🔥 发送 [Pull Request](https://github.com/LunaGao/material-design-3-color-editor/pulls)
 - ⭐ 给项目点个 Star 支持我们
-
-> 💡 请将上面链接中的 `YOUR_USERNAME` 替换为您的 GitHub 用户名
 
 ---
 
