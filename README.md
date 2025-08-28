@@ -60,7 +60,7 @@
 
 1. **克隆或下载项目**
 ```bash
-# 克隆仓库 (请替换 YOUR_USERNAME 为您的 GitHub 用户名)
+# 克隆仓库
 git clone https://github.com/LunaGao/material-design-3-color-editor.git
 cd material-design-3-color-editor
 
